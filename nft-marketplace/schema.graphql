@@ -1,0 +1,13 @@
+type ListingEntity @entity {
+  id: ID!
+  nftAddress: Bytes! # address
+  tokenId: BigInt! # uint256
+  price: BigInt! # uint256
+  seller: Bytes! # address
+  
+  # "!" -> required. 
+  # Buyer is optional. 
+  # Not required in all events.
+
+  buyer: Bytes # address
+}
